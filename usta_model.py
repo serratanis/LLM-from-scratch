@@ -1,6 +1,9 @@
 import torch
 import torch.nn as nn
-from usta_self_attention import UstaSelfAttention
+
+from usta_layer_norm import UstaLayerNorm
+from usta_decoder_block import UstaDecoderBlock
+
 
 def get_rotary_position_encoding(input: torch.Tensor , base = 10000, device="cpu"):
     context_length,dimension = input.shape
@@ -34,19 +37,21 @@ def get_rotary_position_encoding(input: torch.Tensor , base = 10000, device="cpu
     return input_rotated
 
 class UstaModel(nn.Module):
-    def __init__(self ,vocab_size , embedding_dim,context_length):
+    def __init__(self ,vocab_size , embedding_dim, num_heads,context_length,num_layers):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size,embedding_dim)
         #position embedding but not being used in the forward pass
         #it just for educational purposes
         self.pos_embedding = nn.Embedding(context_length,embedding_dim)
         self.get_pos= get_rotary_position_encoding
-        self.self_attention = UstaSelfAttention(embedding_dim ,embedding_dim)
-
+        self.layers = nn.ModuleList([UstaDecoderBlock(embedding_dim,num_heads,context_length) for _ in range(num_layers)])
     
     def forward(self,x):
+
         x = self.embedding(x) #dictionary meaning of the tokens (words)
         x = self.get_pos(x) # meaning of the tokens in the sentence according to their positions 
-        x = self.self_attention(x)
+        for layer in self.layers :
+            x = layer(x)
+
         return x 
 
