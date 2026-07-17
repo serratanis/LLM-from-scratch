@@ -64,6 +64,7 @@
     "sequences": 60,
     "equal": 61,
     "relationships": 62,
-    "<pad>": 63
-}
+    " ": 63,
+    "<pad>": 64
+  }
 }
