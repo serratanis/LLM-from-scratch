@@ -1,5 +1,8 @@
 # LLM from Scratch 🧠
 
+Run the first version of the model in colab :
+[![Open In Colab]](https://colab.research.google.com/drive/1blwo_5RkHAQFwolms1FOrB8wzE_EWuEJ?usp=sharing)
+
 A personal research project focused on building a Large Language Model (LLM) from the ground up using Python. This project aims to explore the mathematical foundations and core architectures of modern transformer-based language models through hands-on implementation.
 
 ---
