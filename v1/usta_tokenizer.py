@@ -1,7 +1,7 @@
 import json
 import torch 
 
-from usta_self_attention import UstaSelfAttention
+from .usta_self_attention import UstaSelfAttention
 class UstaTokenizer:
     def __init__(self, vocab_file):
         with open(vocab_file, "r") as f:
@@ -47,6 +47,6 @@ class UstaTokenizer:
         text = ""
 
         for id in ids:
-            text += self.reverse_vocab.get(id.item(), "<unk>")
+            text += self.reverse_vocab.get(id, "<unk>")
 
         return text

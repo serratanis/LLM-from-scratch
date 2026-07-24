@@ -1,7 +1,7 @@
 import torch 
 import torch.nn as nn 
 
-from usta_casual_attention import UstaCasualAttention 
+from .usta_casual_attention import UstaCasualAttention 
 
 class UstaMultiHeadAttention(nn.Module):
     def __init__(self,embedding_dim , output_dim , context_length,num_heads,dropout_rate = 0):

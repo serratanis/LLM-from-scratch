@@ -5,97 +5,123 @@
 ![Status](https://img.shields.io/badge/Status-Work_in_Progress-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A personal research project focused on implementing a **Large Language Model (LLM)** completely from scratch using **Python** and **PyTorch**. The goal is to understand every core component behind modern transformer-based language models by building them manually instead of relying on high-level libraries.
+A personal research project focused on building a **Large Language Model (LLM)** completely from scratch using **Python** and **PyTorch**.
+
+The goal of this project is to understand the inner workings of modern transformer-based language models by implementing every core component manually, without relying on high-level abstractions.
 
 ---
 
 # 🚀 Quick Start
 
-Run the first version of the model directly in **Google Colab**.
+Run the current version of the project directly in **Google Colab**.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](COLAB_LINKİN)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1blwo_5RkHAQFwolms1FOrB8wzE_EWuEJ?usp=sharing)
 
-> No installation required. Simply open the notebook and start experimenting.
+> No installation required. Open the notebook and start experimenting.
 
 ---
 
 # ✨ Features
 
 - ✅ Custom Tokenizer
-- ✅ Token Embeddings
+- ✅ Token Embedding Layer
 - ✅ Positional Embeddings
 - ✅ Multi-Head Self-Attention
 - ✅ Feed Forward Network
 - ✅ Layer Normalization
 - 🚧 Transformer Decoder
-- 🚧 Training Pipeline
+- 🚧 Model Training Pipeline
 - 🚧 Text Generation
 
 ---
 
-# 🛠 Technical Stack
+# 🛠 Tech Stack
 
-- **Language:** Python
-- **Framework:** PyTorch
-- **Notebook:** Jupyter Notebook
-- **Tokenizer:** SentencePiece / Custom Tokenizer
-- **Libraries:** NumPy, Matplotlib
+| Technology | Usage |
+|------------|-------|
+| Python | Core programming language |
+| PyTorch | Neural network implementation |
+| NumPy | Mathematical operations |
+| Jupyter Notebook | Development & experiments |
 
 ---
 
 # 📂 Project Structure
 
 ```text
-LLM/
+LLM-from-scratch/
+│
 ├── data/
+├── notebooks/
+│
 ├── usta_attention.py
 ├── usta_embedding.py
-├── usta_tokenizer.py
 ├── usta_model.py
-├── hf_tokenizer.json
+├── usta_tokenizer.py
+│
 ├── README.md
-└── notebooks/
+└── requirements.txt
 ```
 
 ---
 
 # 🎯 Project Goals
 
-The objective of this project is to gain a deep understanding of how Large Language Models work by implementing each component manually.
+The purpose of this project is not only to build an LLM but also to deeply understand every component behind modern language models.
 
-Current focus areas include:
+The project focuses on implementing:
 
-- Building a custom tokenizer
-- Implementing embedding layers
-- Developing Multi-Head Self-Attention
-- Implementing Transformer Decoder blocks
-- Creating a complete training pipeline
-- Training the model from scratch
-- Generating coherent text
-
----
-
-# 🚧 Development Status
-
-This project is currently **under active development**.
-
-Completed components are continuously being improved while new transformer modules are added.
+- Custom tokenization
+- Embedding layers
+- Positional embeddings
+- Multi-Head Self-Attention
+- Feed Forward Networks
+- Layer Normalization
+- Transformer Decoder Blocks
+- Complete training pipeline
+- Text generation from scratch
 
 ---
 
-# 🗺 Roadmap
+# 📚 Learning Progress
 
-- [x] Custom Tokenizer
-- [x] Embedding Layer
-- [x] Positional Embedding
-- [x] Multi-Head Self-Attention
-- [x] Feed Forward Network
-- [x] Layer Normalization
-- [ ] Transformer Decoder
-- [ ] Training Loop
-- [ ] Text Generation
-- [ ] Model Evaluation
-- [ ] Documentation
+| Component | Status |
+|-----------|--------|
+| Tokenizer | ✅ Completed |
+| Embedding Layer | ✅ Completed |
+| Positional Embedding | ✅ Completed |
+| Multi-Head Attention | ✅ Completed |
+| Feed Forward Network | ✅ Completed |
+| Layer Normalization | ✅ Completed |
+| Transformer Decoder | 🚧 In Progress |
+| Training Loop | 🚧 In Progress |
+| Text Generation | ⏳ Planned |
+| Model Evaluation | ⏳ Planned |
+
+---
+
+# 🚀 Roadmap
+
+- [x] Build a custom tokenizer
+- [x] Implement embedding layers
+- [x] Implement positional embeddings
+- [x] Build Multi-Head Self-Attention
+- [x] Implement Feed Forward Networks
+- [x] Implement Layer Normalization
+- [ ] Complete Transformer Decoder
+- [ ] Train the model
+- [ ] Improve text generation
+- [ ] Hyperparameter tuning
+- [ ] Model evaluation
+- [ ] Larger dataset training
+
+---
+
+# 📖 Current Status
+
+🚧 **This project is actively under development.**
+
+The architecture is continuously improving as new transformer components are implemented and optimized.
 
 ---
 
@@ -103,10 +129,12 @@ Completed components are continuously being improved while new transformer modul
 
 **Serra Tanış**
 
-Computer Engineering student passionate about
+Computer Engineering Student
+
+### Interests
 
 - Artificial Intelligence
-- Large Language Models
+- Large Language Models (LLMs)
 - Deep Learning
 - Transformer Architectures
 - Machine Learning Research
@@ -115,34 +143,33 @@ Computer Engineering student passionate about
 
 # 🤝 Contributions
 
-This is an independent learning and research project.
+Suggestions, ideas, issues and pull requests are always welcome.
 
-Feel free to
+If you find this project useful, feel free to:
 
 - ⭐ Star the repository
-- 🐞 Open an issue
+- 🐛 Report bugs
 - 💡 Suggest improvements
-- 🔀 Submit a pull request
-
-Contributions, ideas and feedback are always welcome.
+- 🔀 Open a Pull Request
 
 ---
 
-# 📌 Future Plans
+# 📌 Future Improvements
 
-- Train larger models
-- Improve tokenizer performance
-- Implement Rotary Positional Embeddings (RoPE)
-- Add KV Cache
-- Implement Flash Attention
-- Optimize inference speed
-- Train on larger datasets
+- Rotary Positional Embeddings (RoPE)
+- KV Cache
+- Flash Attention
+- Better tokenizer
+- Faster inference
+- Larger datasets
+- Better model evaluation
+- Hugging Face compatibility
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this project, consider giving it a star!
+## ⭐ If you like this project, consider giving it a star!
 
 **Building intelligence, one layer at a time. 🧠🚀**
 
